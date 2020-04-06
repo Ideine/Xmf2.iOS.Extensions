@@ -26,7 +26,7 @@ namespace Xmf2.iOS.Extensions.Controls
 		{
 			get
 			{
-				var size = base.IntrinsicContentSize;
+				CGSize size = base.IntrinsicContentSize;
 				size.Width += ContentInset.Left + ContentInset.Right;
 				size.Height += ContentInset.Bottom + ContentInset.Top;
 				return size;

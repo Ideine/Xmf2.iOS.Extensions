@@ -94,7 +94,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 		#region Shadow
 
 		/// <summary>
-		/// <see cref="https://stackoverflow.com/a/48489506/1479638"/>
+		/// <see cref="!:https://stackoverflow.com/a/48489506/1479638"/>
 		/// </summary>
 		public static TView WithSketchShadow<TView>(this TView view, UIColor shadowColor, float x = 0, float y = 0, float blur = 4) where TView : UIView
 		{
@@ -196,7 +196,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 		{
 			view.Alpha = alpha;
 		}
-		
+
 		[Obsolete]
 		public static TView AddTapAction<TView>(this TView view, Action tapped) where TView : UIView
 		{

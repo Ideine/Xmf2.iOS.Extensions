@@ -9,9 +9,9 @@ namespace Xmf2.iOS.Extensions.Extensions
 		{
 			if (gestureRecognizersToAdd != null)
 			{
-				var delta = gestureRecognizersToAdd.Except(view.GestureRecognizers ?? new UIGestureRecognizer[] { }).ToArray();
+				UIGestureRecognizer[] delta = gestureRecognizersToAdd.Except(view.GestureRecognizers ?? new UIGestureRecognizer[] { }).ToArray();
 
-				foreach (var recognizer in delta)
+				foreach (UIGestureRecognizer recognizer in delta)
 				{
 					view.AddGestureRecognizer(recognizer);
 				}
@@ -24,8 +24,8 @@ namespace Xmf2.iOS.Extensions.Extensions
 		{
 			if (gestureRecognizersToRemove != null)
 			{
-				var delta = view.GestureRecognizers?.Intersect(gestureRecognizersToRemove).ToArray() ?? new UIGestureRecognizer[] { };
-				foreach (var recognizer in delta)
+				UIGestureRecognizer[] delta = view.GestureRecognizers?.Intersect(gestureRecognizersToRemove).ToArray() ?? new UIGestureRecognizer[] { };
+				foreach (UIGestureRecognizer recognizer in delta)
 				{
 					view.RemoveGestureRecognizer(recognizer);
 				}

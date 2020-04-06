@@ -58,8 +58,8 @@ namespace Xmf2.iOS.Extensions.Extensions
 		{
 			if (subviewsToRemove != null)
 			{
-				var delta = view.Subviews.Intersect(subviewsToRemove).ToArray();
-				foreach (var subView in delta)
+				UIView[] delta = view.Subviews.Intersect(subviewsToRemove).ToArray();
+				foreach (UIView subView in delta)
 				{
 					subView.RemoveFromSuperview();
 				}
@@ -72,7 +72,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 		{
 			if (subviewsToAdd != null)
 			{
-				var delta = subviewsToAdd.Except(view.Subviews).ToArray();
+				UIView[] delta = subviewsToAdd.Except(view.Subviews).ToArray();
 				view.AddSubviews(delta);
 			}
 

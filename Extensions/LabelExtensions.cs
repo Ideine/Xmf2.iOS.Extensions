@@ -63,8 +63,8 @@ namespace Xmf2.iOS.Extensions.Extensions
 
 		public static UILabel WithItalicSystemFont(this UILabel label, float size, UIFontWeight weight)
 		{
-			var descriptor = UIFont.SystemFontOfSize(size, weight).FontDescriptor;
-			var italicFontDescriptor = descriptor.CreateWithTraits(descriptor.SymbolicTraits | UIFontDescriptorSymbolicTraits.Italic);
+			UIFontDescriptor descriptor = UIFont.SystemFontOfSize(size, weight).FontDescriptor;
+			UIFontDescriptor italicFontDescriptor = descriptor.CreateWithTraits(descriptor.SymbolicTraits | UIFontDescriptorSymbolicTraits.Italic);
 			label.Font = UIFont.FromDescriptor(italicFontDescriptor, size);
 			return label;
 		}

@@ -25,7 +25,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 				throw new ArgumentNullException(nameof(views));
 			}
 
-			foreach (var view in views)
+			foreach (UIView view in views)
 			{
 				containerView.CenterAndLimitWidth(view, margin);
 			}
@@ -51,7 +51,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 				throw new ArgumentNullException(nameof(views));
 			}
 
-			foreach (var view in views)
+			foreach (UIView view in views)
 			{
 				containerView.CenterAndLimitHeight(view, margin);
 			}
@@ -75,7 +75,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 				throw new ArgumentNullException(nameof(views));
 			}
 
-			foreach (var view in views)
+			foreach (UIView view in views)
 			{
 				containerView.CenterAndFillWidth(view, margin);
 			}
@@ -101,7 +101,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 				throw new ArgumentNullException(nameof(views));
 			}
 
-			foreach (var view in views)
+			foreach (UIView view in views)
 			{
 				containerView.CenterAndFillHeight(view, margin);
 			}

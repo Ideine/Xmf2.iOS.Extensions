@@ -23,7 +23,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 			containerView.AnchorTop(views[0]);
 			containerView.AnchorBottom(views[views.Length - 1]);
 
-			for (var i = 1; i < views.Length; ++i)
+			for (int i = 1; i < views.Length; ++i)
 			{
 				containerView.VerticalSpace(views[i - 1], views[i]);
 			}
@@ -115,7 +115,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 				throw new ArgumentNullException(nameof(views));
 			}
 
-			foreach (var view in views)
+			foreach (UIView view in views)
 			{
 				containerView.WithConstraint(view, NSLayoutAttribute.CenterX, NSLayoutRelation.Equal, containerView, NSLayoutAttribute.CenterX, 1f, offset);
 			}
@@ -136,7 +136,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 				throw new ArgumentNullException(nameof(views));
 			}
 
-			foreach (var view in views)
+			foreach (UIView view in views)
 			{
 				containerView.WithConstraint(view, NSLayoutAttribute.CenterY, NSLayoutRelation.Equal, containerView, NSLayoutAttribute.CenterY, 1f, offset);
 			}

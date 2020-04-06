@@ -43,7 +43,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 		{
 			if (constraintsToRemove != null)
 			{
-				var delta = view.Constraints.Intersect(constraintsToRemove).ToArray();
+				NSLayoutConstraint[] delta = view.Constraints.Intersect(constraintsToRemove).ToArray();
 				view.RemoveConstraints(delta);
 			}
 
@@ -59,7 +59,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 		{
 			if (constraintsToAdd != null)
 			{
-				var delta = constraintsToAdd.Except(view.Constraints).ToArray();
+				NSLayoutConstraint[] delta = constraintsToAdd.Except(view.Constraints).ToArray();
 				view.AddConstraints(delta);
 			}
 
