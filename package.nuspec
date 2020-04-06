@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Xmf2.iOS.Extensions</id>
+    <title>Xmf2.iOS.Extensions</title>
+    <version>1.0.0-pre1</version>
+    <authors>Ideine, VJubert</authors>
+    <owners>Ideine, VJubert</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Ideine fluent extensions to design Xamarin.iOS views</description>
+    <releaseNotes>initial release</releaseNotes>
+    <copyright>Copyright Ideine 2020</copyright>
+    <tags>xmf2 xamarin ios fluent ideine</tags>
+    <dependencies>
+      <group targetFramework="xamarinios10"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\*.dll;bin\Release\*.pdb" target="lib\xamarinios10"/>
+  </files>
+</package>

@@ -31,18 +31,6 @@
         <WarningLevel>4</WarningLevel>
         <ConsolePause>false</ConsolePause>
     </PropertyGroup>
-		<PropertyGroup>
-			  <PackOnBuild>true</PackOnBuild>
-        <Title>Xmf2.iOS.Extensions</Title>
-        <PackageId>Xmf2.iOS.Extensions</PackageId>
-        <PackageVersion>1.0.0-pre1</PackageVersion>
-        <Copyright>Ideine 2020</Copyright>
-        <Authors>Ideine, VJubert</Authors>
-        <Owners>Ideine, VJubert</Owners>
-        <PackageReleaseNotes>initial release</PackageReleaseNotes>
-        <PackageTags>xmf2, xamarin, ios, fluent, ideine</PackageTags>
-        <Description>Ideine fluent extensions to design Xamarin.iOS views</Description>
-		</PropertyGroup>
     <ItemGroup>
         <Reference Include="System" />
         <Reference Include="System.Xml" />
