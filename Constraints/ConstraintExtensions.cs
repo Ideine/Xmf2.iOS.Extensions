@@ -70,7 +70,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 
 		#region WithConstraint
 
-		public static UIView WithConstraint(this UIView constrainedView, UIView view, NSLayoutAttribute attribute, NSLayoutRelation relation, nfloat multiplier, nfloat constant, [CallerMemberName] string identifier = "")
+		public static UIView WithConstraint(this UIView constrainedView, UIView view, NSLayoutAttribute attribute, NSLayoutRelation relation, nfloat multiplier, nfloat constant, [CallerMemberName] string identifier = "", float? priority = null)
 		{
 			if (view != null && view != constrainedView)
 			{
@@ -84,11 +84,16 @@ namespace Xmf2.iOS.Extensions.Constraints
 				constraint.SetIdentifier(identifier);
 			}
 
+			if (priority.HasValue)
+			{
+				constraint.Priority = priority.Value;
+			}
+
 			constrainedView.AddConstraint(constraint);
 			return constrainedView;
 		}
 
-		public static UIView WithConstraint(this UIView constrainedView, UIView view1, NSLayoutAttribute attribute1, NSLayoutRelation relation, UIView view2, NSLayoutAttribute attribute2, nfloat multiplier, nfloat constant, [CallerMemberName] string identifier = "")
+		public static UIView WithConstraint(this UIView constrainedView, UIView view1, NSLayoutAttribute attribute1, NSLayoutRelation relation, UIView view2, NSLayoutAttribute attribute2, nfloat multiplier, nfloat constant, [CallerMemberName] string identifier = "", float? priority = null)
 		{
 			if (view1 != null && view1 != constrainedView)
 			{
@@ -105,6 +110,11 @@ namespace Xmf2.iOS.Extensions.Constraints
 			if (!string.IsNullOrEmpty(identifier))
 			{
 				constraint.SetIdentifier(identifier);
+			}
+
+			if (priority.HasValue)
+			{
+				constraint.Priority = priority.Value;
 			}
 
 			constrainedView.AddConstraint(constraint);
