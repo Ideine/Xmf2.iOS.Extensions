@@ -2,12 +2,22 @@ using System;
 using CoreGraphics;
 using Foundation;
 using UIKit;
+using Xmf2.iOS.Extensions.Controls.HighlightButton;
+using Xmf2.iOS.Extensions.Controls.StatusButton;
 
 namespace Xmf2.iOS.Extensions.Extensions
 {
 	public static class ButtonExtensions
 	{
+		#region Creator
+
 		public static UIButton CreateButton(this object _, UIButtonType type = UIButtonType.Custom) => new UIButton(type);
+
+		public static UIActionHighlightButton CreateActionHighlightButton(this object _) => new UIActionHighlightButton();
+
+		public static UIStatusButton CreateStatusButton(this object _) => new UIStatusButton();
+
+		#endregion
 
 		#region EdgeInset
 

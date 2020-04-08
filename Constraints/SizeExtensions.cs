@@ -170,6 +170,16 @@ namespace Xmf2.iOS.Extensions.Constraints
 			return containerView.WithConstraint(containerView, NSLayoutAttribute.Height, NSLayoutRelation.Equal, view, NSLayoutAttribute.Height, 1f, margin, nameof(FillHeight));
 		}
 
+		public static UIView FillHeight(this UIView containerView, params UIView[] views)
+		{
+			foreach (UIView view in views)
+			{
+				containerView.FillHeight(view);
+			}
+
+			return containerView;
+		}
+
 		#endregion
 
 		#region SameX

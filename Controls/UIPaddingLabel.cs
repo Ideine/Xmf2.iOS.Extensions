@@ -17,11 +17,6 @@ namespace Xmf2.iOS.Extensions.Controls
 			}
 		}
 
-		public override void DrawText(CGRect rect)
-		{
-			base.DrawText(ContentInset.InsetRect(rect));
-		}
-
 		public override CGSize IntrinsicContentSize
 		{
 			get
@@ -32,6 +27,8 @@ namespace Xmf2.iOS.Extensions.Controls
 				return size;
 			}
 		}
+
+		public override void DrawText(CGRect rect) => base.DrawText(ContentInset.InsetRect(rect));
 
 		#region Fluent Method
 

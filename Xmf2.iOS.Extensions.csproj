@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -41,6 +44,11 @@
         <Compile Include="Constraints\LayoutExtensions.cs" />
         <Compile Include="Constraints\ScrollConstraintExtensions.cs" />
         <Compile Include="Constraints\SizeExtensions.cs" />
+        <Compile Include="Controls\DynamicCollectionView.cs" />
+        <Compile Include="Controls\HighlightButton\UIActionHighlightButton.cs" />
+        <Compile Include="Controls\HighlightButton\UIBaseHighlightButton.cs" />
+        <Compile Include="Controls\StatusButton\ButtonStatus.cs" />
+        <Compile Include="Controls\StatusButton\UIStatusButton.cs" />
         <Compile Include="Controls\UIPaddingLabel.cs" />
         <Compile Include="Controls\VisibilityToggleContainer.cs" />
         <Compile Include="Extensions\AnimationExtensions.cs" />
@@ -49,7 +57,10 @@
         <Compile Include="Extensions\DatePickerExtensions.cs" />
         <Compile Include="Extensions\GestureExtensions.cs" />
         <Compile Include="Extensions\ImageViewExtensions.cs" />
+        <Compile Include="Extensions\KeyboardToolbarExtensions.cs" />
         <Compile Include="Extensions\LabelExtensions.cs" />
+        <Compile Include="Extensions\FoundationExtensions.cs" />
+        <Compile Include="Extensions\NavigationControllerExtensions.cs" />
         <Compile Include="Extensions\ScrollViewExtensions.cs" />
         <Compile Include="Extensions\SearchBarExtensions.cs" />
         <Compile Include="Extensions\SubviewExtensions.cs" />
@@ -58,6 +69,7 @@
         <Compile Include="Extensions\TextFieldExtensions.cs" />
         <Compile Include="Extensions\TextViewExtensions.cs" />
         <Compile Include="Extensions\ViewExtensions.cs" />
+        <Compile Include="NavigationController\HandleFreeRotateNavigationController.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

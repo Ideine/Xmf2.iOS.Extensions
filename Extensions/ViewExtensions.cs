@@ -99,7 +99,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 		public static TView WithSketchShadow<TView>(this TView view, UIColor shadowColor, float x = 0, float y = 0, float blur = 4) where TView : UIView
 		{
 			view.Layer.ShadowColor = shadowColor.ColorWithAlpha(1).CGColor;
-			view.Layer.ShadowOpacity = (float) shadowColor.CGColor.Alpha;
+			view.Layer.ShadowOpacity = (float)shadowColor.CGColor.Alpha;
 			view.Layer.ShadowOffset = new CGSize(x, y);
 			view.Layer.ShadowRadius = blur / 2f;
 			return view;
@@ -108,7 +108,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 		public static TView WithShadow<TView>(this TView view, UIColor shadowColor, float xOffset, float yOffset, float radius = 8f) where TView : UIView
 		{
 			view.Layer.ShadowColor = shadowColor.ColorWithAlpha(1).CGColor;
-			view.Layer.ShadowOpacity = (float) shadowColor.CGColor.Alpha;
+			view.Layer.ShadowOpacity = (float)shadowColor.CGColor.Alpha;
 			view.Layer.ShadowOffset = new CGSize(xOffset, yOffset);
 			view.Layer.ShadowRadius = radius;
 			return view;
@@ -130,7 +130,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 		/// <param name="priority">The first to be compressed is the one with the lowest <see cref="UILayoutPriority"/></param>
 		public static TView WithContentCompressionResistancePriority<TView>(this TView view, UILayoutPriority priority, UILayoutConstraintAxis axis) where TView : UIView
 		{
-			view.SetContentCompressionResistancePriority((float) priority, axis);
+			view.SetContentCompressionResistancePriority((float)priority, axis);
 			return view;
 		}
 
@@ -139,7 +139,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 		/// </summary>
 		public static TView WithContentHuggingPriority<TView>(this TView view, UILayoutPriority priority, UILayoutConstraintAxis axis) where TView : UIView
 		{
-			view.SetContentHuggingPriority((float) priority, axis);
+			view.SetContentHuggingPriority((float)priority, axis);
 			return view;
 		}
 
@@ -197,7 +197,26 @@ namespace Xmf2.iOS.Extensions.Extensions
 			view.Alpha = alpha;
 		}
 
-		[Obsolete]
+		public static T GetFirstDescendantOfType<T>(this UIView root) where T : UIView
+		{
+			foreach (var view in root.Subviews)
+			{
+				if (view is T resultView)
+				{
+					return resultView;
+				}
+
+				T descendant = GetFirstDescendantOfType<T>(view);
+				if (descendant != null)
+				{
+					return descendant;
+				}
+			}
+
+			return null;
+		}
+
+		[Obsolete("Use version with out gestureRecognizer")]
 		public static TView AddTapAction<TView>(this TView view, Action tapped) where TView : UIView
 		{
 			UITapGestureRecognizer recognizer = new UITapGestureRecognizer(tapped);
@@ -205,5 +224,12 @@ namespace Xmf2.iOS.Extensions.Extensions
 			return view;
 		}
 
+		/// <param name="tapGestureRecognizer">remove and dispose it when you need</param>
+		public static TView AddTapAction<TView>(this TView view, Action tapped, out UITapGestureRecognizer tapGestureRecognizer) where TView : UIView
+		{
+			tapGestureRecognizer = new UITapGestureRecognizer(tapped);
+			view.AddGestureRecognizer(tapGestureRecognizer);
+			return view;
+		}
 	}
 }

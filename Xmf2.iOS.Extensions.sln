@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xmf2.iOS.Extensions", "Xmf2.iOS.Extensions.csproj", "{37CE56D0-9615-4F4C-B029-0679EE4AE43F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{688637AE-75F5-4D78-A23C-41938426AD16}"
+ProjectSection(SolutionItems) = preProject
+	package.nuspec = package.nuspec
+	.azure-pipeline.ci.yml = .azure-pipeline.ci.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
