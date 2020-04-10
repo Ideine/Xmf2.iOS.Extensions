@@ -23,7 +23,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 			containerView.AnchorTop(views[0]);
 			containerView.AnchorBottom(views[views.Length - 1]);
 
-			for (int i = 1; i < views.Length; ++i)
+			for (int i = 1 ; i < views.Length ; ++i)
 			{
 				containerView.VerticalSpace(views[i - 1], views[i]);
 			}
@@ -108,7 +108,9 @@ namespace Xmf2.iOS.Extensions.Constraints
 			return containerView.WithConstraint(containerView, NSLayoutAttribute.CenterX, NSLayoutRelation.Equal, view, NSLayoutAttribute.CenterX, 1f, offset);
 		}
 
-		public static UIView CenterHorizontally(this UIView containerView, float offset = 0f, params UIView[] views)
+		public static UIView CenterHorizontally(this UIView containerView, params UIView[] views) => containerView.CenterHorizontally(0f, views);
+
+		public static UIView CenterHorizontally(this UIView containerView, float offset, params UIView[] views)
 		{
 			if (views == null)
 			{
@@ -129,7 +131,9 @@ namespace Xmf2.iOS.Extensions.Constraints
 			return containerView;
 		}
 
-		public static UIView CenterVertically(this UIView containerView, float offset = 0f, params UIView[] views)
+		public static UIView CenterVertically(this UIView containerView, params UIView[] views) => containerView.CenterVertically(0f, views);
+
+		public static UIView CenterVertically(this UIView containerView, float offset, params UIView[] views)
 		{
 			if (views == null)
 			{
