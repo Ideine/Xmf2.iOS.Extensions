@@ -93,6 +93,12 @@ namespace Xmf2.iOS.Extensions.Extensions
 
 		#region Shadow
 
+		public static TView WithSketchShadow<TView>(this TView view, int shadowColor, float x = 0, float y = 0, float blur = 4) where TView : UIView
+			=> view.WithSketchShadow(shadowColor.ColorFromHex(), x, y, blur);
+
+		public static TView WithSketchShadow<TView>(this TView view, uint shadowColor, float x = 0, float y = 0, float blur = 4) where TView : UIView
+			=> view.WithSketchShadow(shadowColor.ColorFromHex(), x, y, blur);
+
 		/// <summary>
 		/// <see cref="!:https://stackoverflow.com/a/48489506/1479638"/>
 		/// </summary>
@@ -104,6 +110,12 @@ namespace Xmf2.iOS.Extensions.Extensions
 			view.Layer.ShadowRadius = blur / 2f;
 			return view;
 		}
+
+		public static TView WithShadow<TView>(this TView view, int shadowColor, float xOffset, float yOffset, float radius = 8f) where TView : UIView
+			=> view.WithShadow(shadowColor.ColorFromHex(), xOffset, yOffset, radius);
+
+		public static TView WithShadow<TView>(this TView view, uint shadowColor, float xOffset, float yOffset, float radius = 8f) where TView : UIView
+			=> view.WithShadow(shadowColor.ColorFromHex(), xOffset, yOffset, radius);
 
 		public static TView WithShadow<TView>(this TView view, UIColor shadowColor, float xOffset, float yOffset, float radius = 8f) where TView : UIView
 		{
@@ -173,6 +185,10 @@ namespace Xmf2.iOS.Extensions.Extensions
 			view.Layer.BorderWidth = size;
 			return view;
 		}
+
+		public static TView WithBorder<TView>(this TView view, uint borderColor, float size) where TView : UIView => view.WithBorder(borderColor.ColorFromHex(), size);
+
+		public static TView WithBorder<TView>(this TView view, int borderColor, float size) where TView : UIView => view.WithBorder(borderColor.ColorFromHex(), size);
 
 		public static TView WithCornerRadius<TView>(this TView view, float size) where TView : UIView
 		{
