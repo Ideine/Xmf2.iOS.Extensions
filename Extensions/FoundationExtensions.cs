@@ -29,6 +29,11 @@ namespace Xmf2.iOS.Extensions.Extensions
 			return string.Join(string.Empty, data.Select(x => x.ToString(format)));
 		}
 
+		public static bool TryGet<T>(this NSDictionary source, string key, out T value) where T : class
+		{
+			return source.TryGet(new NSString(key), out value);
+		}
+
 		public static bool TryGet<T>(this NSDictionary source, NSString key, out T value) where T : class
 		{
 			if (source.ContainsKey(key) && source[key] is T result)
