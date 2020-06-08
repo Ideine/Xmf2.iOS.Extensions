@@ -179,16 +179,16 @@ namespace Xmf2.iOS.Extensions.Extensions
 			return view;
 		}
 
-		public static TView WithBorder<TView>(this TView view, UIColor borderColor, float size) where TView : UIView
+		public static TView WithBorder<TView>(this TView view, UIColor borderColor, float size = 1) where TView : UIView
 		{
 			view.Layer.BorderColor = borderColor.CGColor;
 			view.Layer.BorderWidth = size;
 			return view;
 		}
 
-		public static TView WithBorder<TView>(this TView view, uint borderColor, float size) where TView : UIView => view.WithBorder(borderColor.ColorFromHex(), size);
+		public static TView WithBorder<TView>(this TView view, uint borderColor, float size = 1) where TView : UIView => view.WithBorder(borderColor.ColorFromHex(), size);
 
-		public static TView WithBorder<TView>(this TView view, int borderColor, float size) where TView : UIView => view.WithBorder(borderColor.ColorFromHex(), size);
+		public static TView WithBorder<TView>(this TView view, int borderColor, float size = 1) where TView : UIView => view.WithBorder(borderColor.ColorFromHex(), size);
 
 		public static TView WithCornerRadius<TView>(this TView view, float size) where TView : UIView
 		{
