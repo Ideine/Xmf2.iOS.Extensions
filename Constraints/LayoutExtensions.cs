@@ -50,7 +50,7 @@ namespace Xmf2.iOS.Extensions.Constraints
 			return containerView.IncloseFromTop(containerView, view, margin);
 		}
 
-		public static UIView IncloseFromTop(this UIView constrainedView, UIView inclosingView, UIView view, float margin)
+		public static UIView IncloseFromTop(this UIView constrainedView, UIView inclosingView, UIView view, float margin = 0f)
 		{
 			return constrainedView.WithConstraint(inclosingView, NSLayoutAttribute.Top, NSLayoutRelation.LessThanOrEqual, view, NSLayoutAttribute.Top, 1f, -margin);
 		}
