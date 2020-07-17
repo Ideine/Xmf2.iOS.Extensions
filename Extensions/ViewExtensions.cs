@@ -202,6 +202,12 @@ namespace Xmf2.iOS.Extensions.Extensions
 			return view;
 		}
 
+		public static TView WithAlpha<TView>(this TView view, float alpha) where TView : UIView
+		{
+			view.Alpha = alpha;
+			return view;
+		}
+
 		public static TView ScaleTo<TView>(this TView view, float ratio) where TView : UIView
 		{
 			view.Transform = CGAffineTransform.MakeScale(ratio, ratio);
