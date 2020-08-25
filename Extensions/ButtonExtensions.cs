@@ -85,6 +85,12 @@ namespace Xmf2.iOS.Extensions.Extensions
 			return button;
 		}
 
+		public static TButton WithEllipsis<TButton>(this TButton button) where TButton : UIButton
+		{
+			button.LineBreakMode = UILineBreakMode.TailTruncation;
+			return button;
+		}
+
 		#endregion
 
 		#region TextColor
