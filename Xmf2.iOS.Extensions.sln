@@ -6,6 +6,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{688637AE-7
 ProjectSection(SolutionItems) = preProject
 	package.nuspec = package.nuspec
 	.azure-pipeline.ci.yml = .azure-pipeline.ci.yml
+	README.md = README.md
 EndProjectSection
 EndProject
 Global
