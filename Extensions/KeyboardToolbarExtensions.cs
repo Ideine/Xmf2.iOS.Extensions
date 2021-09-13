@@ -21,7 +21,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 		private static UIView CreateToolbar(CGRect frame, string buttonTitle, UIResponder next, Action onEnter)
 		{
 			var toolbar = new UIToolbar(new CGRect(0, 0, frame.Size.Width, 50));
-			var button = new UIBarButtonItem(buttonTitle, UIBarButtonItemStyle.Plain, (sender, e) =>
+			var button = new UIBarButtonItem(buttonTitle, UIBarButtonItemStyle.Plain, (_, _) =>
 			{
 				next?.BecomeFirstResponder();
 				onEnter?.Invoke();

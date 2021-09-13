@@ -8,8 +8,8 @@ namespace Xmf2.iOS.Extensions.Extensions
 {
 	public static class FoundationExtensions
 	{
-		private static readonly DateTime _reference = new DateTime(2001, 1, 1, 0, 0, 0);
-		private static readonly DateTime _referenceForNSDate = new DateTime(2001, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+		private static readonly DateTime _reference = new(2001, 1, 1, 0, 0, 0);
+		private static readonly DateTime _referenceForNSDate = new(2001, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
 		/// <summary>
 		/// Convert NSDate to DateTime

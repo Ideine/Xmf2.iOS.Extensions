@@ -5,7 +5,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 {
 	public static class SearchBarExtensions
 	{
-		public static UISearchBar CreateSearchBar(this object _) => new UISearchBar();
+		public static UISearchBar CreateSearchBar(this object _) => new();
 
 		public static UISearchBar WithPlaceholder(this UISearchBar input, string text)
 		{
@@ -58,8 +58,8 @@ namespace Xmf2.iOS.Extensions.Extensions
 
 		#region Internal field
 
-		private static readonly NSString _searchField = new NSString("searchField");
-		private static readonly NSString _searchCancelButton = new NSString("cancelButton");
+		private static readonly NSString _searchField = new("searchField");
+		private static readonly NSString _searchCancelButton = new("cancelButton");
 
 		/// <summary>
 		/// Returns <see cref="UISearchBar"/>'s <see cref="UITextField"/>.

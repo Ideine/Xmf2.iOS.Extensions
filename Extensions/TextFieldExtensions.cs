@@ -7,7 +7,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 {
 	public static class TextFieldExtensions
 	{
-		public static UITextField CreateTextField(this object _) => new UITextField();
+		public static UITextField CreateTextField(this object _) => new();
 
 		#region Field type
 

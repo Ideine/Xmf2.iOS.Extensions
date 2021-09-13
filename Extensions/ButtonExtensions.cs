@@ -11,11 +11,11 @@ namespace Xmf2.iOS.Extensions.Extensions
 	{
 		#region Creator
 
-		public static UIButton CreateButton(this object _, UIButtonType type = UIButtonType.Custom) => new UIButton(type);
+		public static UIButton CreateButton(this object _, UIButtonType type = UIButtonType.Custom) => new(type);
 
-		public static UIActionHighlightButton CreateActionHighlightButton(this object _) => new UIActionHighlightButton();
+		public static UIActionHighlightButton CreateActionHighlightButton(this object _) => new();
 
-		public static UIStatusButton CreateStatusButton(this object _) => new UIStatusButton();
+		public static UIStatusButton CreateStatusButton(this object _) => new();
 
 		#endregion
 

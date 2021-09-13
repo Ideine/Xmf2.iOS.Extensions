@@ -4,7 +4,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 {
 	public static class ImageViewExtensions
 	{
-		public static UIImageView CreateImageView(this object _) => new UIImageView();
+		public static UIImageView CreateImageView(this object _) => new();
 
 		public static UIImageView CreateImageView(this object _, string imageName) => new UIImageView().WithImage(imageName);
 

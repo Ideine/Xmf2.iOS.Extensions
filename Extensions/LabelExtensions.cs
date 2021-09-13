@@ -8,7 +8,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 	{
 		#region Creator
 
-		public static UILabel CreateLabel(this object _) => new UILabel();
+		public static UILabel CreateLabel(this object _) => new();
 
 		public static UILabel CreatePaddingLabel(this object _, UIEdgeInsets inset) => new UIPaddingLabel
 		{
