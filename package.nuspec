@@ -20,7 +20,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="src\bin\Release\*.dll;src\bin\Release\*.pdb" target="lib\xamarinios10"/>
-    <file src="src\bin\Release\*.dll;src\bin\Release\*.pdb" target="lib\net7.0-ios"/>
+    <file src="src\bin\Release\xamarin.ios10\*.dll;src\bin\Release\*.pdb" target="lib\xamarinios10"/>
+    <file src="src\bin\Release\net7.0-ios\*.dll;src\bin\Release\*.pdb" target="lib\net7.0-ios"/>
   </files>
 </package>
