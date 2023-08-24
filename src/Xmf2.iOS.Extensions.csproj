@@ -6,10 +6,14 @@
 		<Nullable>disable</Nullable>
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 	</PropertyGroup>
-	
+
 	<PropertyGroup>
 		<SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-ios'))">11.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
+
+	<ItemGroup Condition=" '$(Configuration)'=='Release' ">
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All"/>
+	</ItemGroup>
 
 	<ItemGroup>
 		<Compile Include="**\*.cs"/>
