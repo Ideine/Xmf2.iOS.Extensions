@@ -87,7 +87,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 
 		public static TButton WithEllipsis<TButton>(this TButton button) where TButton : UIButton
 		{
-			button.LineBreakMode = UILineBreakMode.TailTruncation;
+			button.TitleLabel.LineBreakMode = UILineBreakMode.TailTruncation;
 			return button;
 		}
 
@@ -160,7 +160,7 @@ namespace Xmf2.iOS.Extensions.Extensions
 
 		public static TButton WithFont<TButton>(this TButton button, UIFont font) where TButton : UIButton
 		{
-			button.Font = font;
+			button.TitleLabel.Font = font;
 			return button;
 		}
 
