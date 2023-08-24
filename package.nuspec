@@ -16,7 +16,7 @@
     <tags>xmf2 xamarin ios fluent ideine</tags>
     <dependencies>
       <group targetFramework="xamarinios10"/>
-      <group targetFramework="net7.0-ios"/>
+      <group targetFramework="net7.0-ios16.0"/>
     </dependencies>
   </metadata>
   <files>
