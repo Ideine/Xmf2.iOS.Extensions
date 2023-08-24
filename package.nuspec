@@ -3,7 +3,7 @@
   <metadata>
     <id>Xmf2.iOS.Extensions</id>
     <title>Xmf2.iOS.Extensions</title>
-    <version>1.0.9</version>
+    <version>7.0.0-pre1</version>
     <authors>Ideine, VJubert</authors>
     <owners>Ideine, VJubert</owners>
     <projectUrl>https://github.com/Ideine/Xmf2.iOS.Extensions</projectUrl>
@@ -16,9 +16,11 @@
     <tags>xmf2 xamarin ios fluent ideine</tags>
     <dependencies>
       <group targetFramework="xamarinios10"/>
+      <group targetFramework="net7.0-ios"/>
     </dependencies>
   </metadata>
   <files>
-    <file src="bin\Release\*.dll;bin\Release\*.pdb" target="lib\xamarinios10"/>
+    <file src="src\bin\Release\*.dll;src\bin\Release\*.pdb" target="lib\xamarinios10"/>
+    <file src="src\bin\Release\*.dll;src\bin\Release\*.pdb" target="lib\net7.0-ios"/>
   </files>
 </package>

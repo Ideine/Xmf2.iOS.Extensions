@@ -1,0 +1,20 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/3.0.44">
+	<PropertyGroup>
+		<TargetFrameworks>Xamarin.iOS10;net7.0-ios</TargetFrameworks>
+		<RootNamespace>Xmf2.iOS.Extensions</RootNamespace>
+		<LangVersion>latest</LangVersion>
+		<Nullable>disable</Nullable>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<SupportedOSPlatformVersion Condition="$(TargetFramework.Contains('-ios'))">11.0</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="**\*.cs"/>
+		<Compile Remove="obj\**"/>
+		<Compile Remove="bin\**"/>
+	</ItemGroup>
+
+</Project>
