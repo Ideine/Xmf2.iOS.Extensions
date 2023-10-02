@@ -16,6 +16,13 @@ namespace Xmf2.iOS.Extensions.Controls
 			set => ShowChildView(value);
 		}
 
+		public override bool Hidden
+		{
+			get => base.Hidden;
+			[Obsolete("Please use Visible to hide or show children's views")]
+			set => base.Hidden = value;
+		}
+
 		public VisibilityToggleContainer(bool useEmptyHeightConstraint = false, bool useEmptyWidthConstraint = false)
 		{
 			if (useEmptyHeightConstraint)
