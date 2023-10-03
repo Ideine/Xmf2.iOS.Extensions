@@ -7,7 +7,7 @@
     <authors>Ideine, VJubert</authors>
     <owners>Ideine, VJubert</owners>
     <projectUrl>https://github.com/Ideine/Xmf2.iOS.Extensions</projectUrl>
-    <license type="expression">MIT</license>
+    <license type="file">LICENSE</license>
     <repository url="https://github.com/Ideine/Xmf2.iOS.Extensions.git" type="git"/>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ideine fluent extensions to design Xamarin.iOS views</description>
@@ -22,5 +22,6 @@
   <files>
     <file src="src\bin\Release\xamarin.ios10\*.dll;src\bin\Release\*.pdb" target="lib\xamarinios10"/>
     <file src="src\bin\Release\net7.0-ios\*.dll;src\bin\Release\*.pdb" target="lib\net7.0-ios16.0"/>
+    <file src="LICENSE" target="" />
   </files>
 </package>
